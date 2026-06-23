@@ -1,4 +1,4 @@
-# Aditya Guha — Personal Portfolio
+# Aditya Guha - Personal Portfolio
 
 A premium, minimalist, Apple-inspired portfolio website designed for a modern, high-end web experience. The site leverages raw HTML, modular CSS, and vanilla JavaScript along with modern animation libraries to deliver a buttery smooth, engaging user journey.
 
@@ -26,24 +26,27 @@ A premium, minimalist, Apple-inspired portfolio website designed for a modern, h
 
 **Scroll Engine:** Lenis
 
-## Project Structure
+## ⚠️ License
 
-```
-.
-├── index.html          # Main entry point containing the site structure
-├── assets/
-│   ├── css/            # Modular CSS files (variables, hero, projects, etc.)
-│   ├── js/             # Vanilla JS logic (animations, scroll config)
-│   └── images/         # Local assets like favicons and profile photos
-└── README.md
-```
+**This repository is NOT open source.**
 
-## How to Run
+All source code, design, assets, and associated files are the exclusive intellectual property of **Aditya Guha** and are protected under copyright law.
 
-Because the project is entirely static and relies on no build tools:
-1. Clone the repository to your local machine.
-2. Open `index.html` directly in any modern web browser.
-3. *Optional:* To run it via a local server (recommended), you can use Python's built-in server: `python3 -m http.server 8000` or Node's serve: `npx serve .`
+**You may NOT:**
+
+- ❌ Use, copy, or reproduce any part of this code
+- ❌ Modify, adapt, or create derivative works
+- ❌ Distribute, publish, or share any portion of this repository
+- ❌ Sublicense or sell the code or any part of it
+- ❌ Use the code for any commercial or non-commercial purpose
+
+This applies to all files including but not limited to HTML, CSS, JavaScript, images, and design assets.
+
+**Unauthorized use of this code is a violation of copyright law and may result in legal action.**
+
+For licensing inquiries, contact: **[adi@adityaguha.tech](mailto:adi@adityaguha.tech)**
+
+See the full [LICENSE](./LICENSE) file for complete terms.
 
 ## Contact
 
@@ -52,3 +55,7 @@ Because the project is entirely static and relies on no build tools:
 **LinkedIn:** [Aditya Guha](https://www.linkedin.com/in/adityaguha1/)
 
 **GitHub:** [@AdityaGuhaa](https://github.com/AdityaGuhaa)
+
+---
+
+<sub>© 2026 Aditya Guha. All Rights Reserved. No part of this repository may be reproduced or used without explicit written permission.</sub>
