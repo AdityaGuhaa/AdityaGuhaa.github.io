@@ -35,6 +35,10 @@
     color: var(--white);
 }
 
+.exp-body {
+    max-width: 860px;
+}
+
 .exp-role {
     font-size: 1.5rem;
     font-weight: 500;
@@ -54,5 +58,13 @@
     font-size: 0.9rem;
     line-height: 1.7;
     color: var(--gray-hi);
-    max-width: 760px;
+}
+
+.exp-logo-float {
+    float: left;
+    max-width: 130px;
+    height: auto;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.95;
 }

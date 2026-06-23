@@ -18,6 +18,11 @@
         padding: 2.5rem 0;
     }
     
+    .exp-logo-float {
+        max-width: 90px;
+        margin-left: 1rem;
+    }
+    
     .exp-item:hover {
         padding-left: 0;
         padding-right: 0;
