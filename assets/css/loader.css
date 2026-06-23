@@ -8,8 +8,45 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.75rem;
+    overflow: hidden;
 }
 
+/* ── Animated background shimmer ── */
+#loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 50%,
+        rgba(0, 0, 0, 0.02) 0%,
+        transparent 70%
+    );
+    animation: loaderPulse 2s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%      { opacity: 1;   transform: scale(1.05); }
+}
+
+/* ── Spinner ring behind the number ── */
+#loader::after {
+    content: '';
+    position: absolute;
+    width: clamp(200px, 35vw, 360px);
+    height: clamp(200px, 35vw, 360px);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-top-color: rgba(0, 0, 0, 0.15);
+    animation: loaderSpin 1.8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes loaderSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Big number counter ── */
 .l-num {
     font-family: var(--font-d);
     font-size: clamp(8rem, 22vw, 18rem);
@@ -18,28 +55,62 @@
     min-width: 3ch;
     text-align: right;
     letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+    animation: numFadeIn 0.6s ease-out both;
 }
 
+@keyframes numFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── "Loading" label ── */
 .l-label {
     font-size: 0.58rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gray-mid);
     font-weight: 600;
+    position: relative;
+    z-index: 1;
+    animation: labelPulse 1.5s ease-in-out infinite, numFadeIn 0.6s 0.15s ease-out both;
 }
 
+@keyframes labelPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.4; }
+}
+
+/* ── Bottom progress bar track ── */
 .l-bar-wrap {
     position: absolute;
     bottom: 2.5rem;
     left: 2rem;
     right: 2rem;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.08);
+    height: 2px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    overflow: hidden;
 }
 
+/* ── Progress bar fill with animated gradient ── */
 .l-bar {
     height: 100%;
     width: 0%;
-    background: var(--white);
+    border-radius: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--gray-mid) 0%,
+        var(--white) 50%,
+        var(--gray-mid) 100%
+    );
+    background-size: 200% 100%;
+    animation: barShimmer 1.5s ease-in-out infinite;
     transition: width 0.05s linear;
+}
+
+@keyframes barShimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
