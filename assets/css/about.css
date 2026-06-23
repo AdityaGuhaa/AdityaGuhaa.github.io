@@ -1,0 +1,38 @@
+.about-p {
+    font-size: clamp(1.1rem, 2.4vw, 2rem);
+    line-height: 1.72;
+    font-weight: 300;
+    max-width: 860px;
+    color: var(--gray-hi);
+}
+
+/* Each word starts dim — ScrollTrigger lights them up */
+.about-p .word {
+    display: inline;
+    opacity: 0.12;
+    color: var(--white);
+    transition: opacity 0.1s;
+}
+
+/* Showreel */
+.showreel-container {
+    display: block;
+    width: 100%;
+    margin-top: 5rem;
+    position: relative;
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--bg-soft);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+    aspect-ratio: 16 / 9;
+}
+
+.showreel-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}

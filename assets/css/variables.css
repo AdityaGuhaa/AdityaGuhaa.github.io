@@ -1,0 +1,39 @@
+:root {
+    /* Background */
+    --bg: #F5F5F7; /* Apple's exact light gray background */
+    --bg-soft: #FFFFFF; /* Pure white for cards */
+
+    /* Text */
+    --white: #1D1D1F; /* Apple's dark text */
+    --gray-hi: #515154;
+    --gray-mid: #86868B; /* Classic Apple secondary gray */
+    --gray-lo: #D2D2D7;
+
+    /* Glass & Shadows */
+    --glass: rgba(255, 255, 255, 0.72);
+    --glass-b: rgba(255, 255, 255, 0.85);
+
+    /* Borders */
+    --border: rgba(0, 0, 0, 0.06);
+
+    /* Glow blobs - hidden for a cleaner Apple look */
+    --glow-blue: transparent;
+    --glow-pur: transparent;
+
+    /* Typography - SF Pro Display / System default */
+    --font-d: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-b: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    /* Spacing scale */
+    --s-xs: 0.5rem;
+    --s-sm: 1rem;
+    --s-md: 2rem;
+    --s-lg: 4rem;
+    --s-xl: 7rem;
+
+    /* Transitions */
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --t-fast: 0.2s;
+    --t-med: 0.4s;
+    --t-slow: 0.7s;
+}

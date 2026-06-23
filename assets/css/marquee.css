@@ -1,0 +1,46 @@
+.mq-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 0;
+    background: var(--bg);
+}
+
+.mq-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 55s linear infinite;
+}
+
+.mq-track:hover {
+    animation-play-state: paused;
+}
+
+.mq-item {
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    padding: 0 1.5rem;
+    white-space: nowrap;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.mq-dot {
+    color: var(--gray-lo);
+    padding: 0 0.25rem;
+    flex-shrink: 0;
+    font-size: 0.58rem;
+    letter-spacing: 0.22em;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,90 @@
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.proj-card {
+    background: var(--bg-soft);
+    border: none;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    transition: transform var(--t-med), box-shadow var(--t-med);
+    /* For hover tilt 3D */
+    transform-style: preserve-3d;
+}
+
+.proj-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(0,0,0,0.02), transparent 40%);
+    opacity: 0;
+    transition: opacity var(--t-fast);
+    pointer-events: none;
+}
+
+.proj-card:hover::before {
+    opacity: 1;
+}
+
+.proj-card:hover {
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.proj-num {
+    font-family: var(--font-d);
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--gray-lo);
+    margin-bottom: 1.5rem;
+    transition: color var(--t-med);
+}
+
+.proj-card:hover .proj-num {
+    color: var(--white);
+}
+
+.proj-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.proj-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--gray-hi);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.proj-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-start;
+    display: inline-block;
+    transition: color var(--t-fast);
+}
+
+.proj-card:hover .proj-link {
+    color: var(--white);
+}

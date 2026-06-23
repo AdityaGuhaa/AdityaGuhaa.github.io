@@ -1,0 +1,58 @@
+.exp-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: padding var(--t-med), background var(--t-med), border-color var(--t-med);
+}
+
+.exp-item:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.exp-item:hover {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: var(--glass);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.exp-period {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--gray-mid);
+    margin-top: 0.4rem;
+    transition: color var(--t-fast);
+}
+
+.exp-item:hover .exp-period {
+    color: var(--white);
+}
+
+.exp-role {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.exp-org {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-hi);
+    margin-bottom: 1.5rem;
+}
+
+.exp-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--gray-hi);
+    max-width: 760px;
+}
