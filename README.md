@@ -16,16 +16,6 @@ A premium, minimalist, Apple-inspired portfolio website designed for a modern, h
 
 **Zero Build Tools:** Completely vanilla setup with zero build steps or heavy dependencies to maintain.
 
-## Tech Stack
-
-**Core:** HTML5, CSS3 (Modular with custom properties/variables)
-
-**Logic:** Vanilla JavaScript (ES6+)
-
-**Animation:** GSAP (GreenSock Animation Platform) + ScrollTrigger
-
-**Scroll Engine:** Lenis
-
 ## ⚠️ License
 
 **This repository is NOT open source.**
