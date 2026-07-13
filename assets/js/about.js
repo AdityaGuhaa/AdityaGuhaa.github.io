@@ -18,7 +18,7 @@ function initAbout() {
         scrollTrigger: {
             trigger: '#about',
             start: 'top 70%',
-            end: 'bottom 60%',
+            end: 'bottom 80%',
             scrub: 1.2
         }
     });

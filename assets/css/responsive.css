@@ -9,6 +9,15 @@
    ───────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
 
+    /* Global Section Spacing */
+    .section {
+        padding: 5rem var(--s-md);
+    }
+
+    .showreel-container {
+        margin-top: 3rem;
+    }
+
     /* Hero */
     #hero {
         padding: 4rem 2rem 2.5rem;
