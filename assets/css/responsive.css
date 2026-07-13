@@ -1,72 +1,522 @@
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — Mobile & iPad optimization
+   Only this file is modified. Desktop styles untouched.
+   Breakpoints: ≤1024px (iPad) · ≤768px (tablet) · ≤480px (phone)
+   ═══════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────
+   ≤ 1024px  —  iPad landscape / small laptops
+   ───────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
+
+    /* Hero */
     .hero-content {
         gap: 2rem;
     }
-    
+
     .hero-photo {
         width: clamp(160px, 28vw, 300px);
     }
 
+    .hero-name {
+        font-size: clamp(4rem, 14vw, 16rem);
+    }
+
+    /* Shared two-column → single column */
     .two-col {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
+    /* Experience */
     .exp-item {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 2.5rem 0;
     }
-    
+
     .exp-logo-float {
         max-width: 90px;
         margin-left: 1rem;
     }
-    
+
+    /* Disable hover padding shift (touch devices have no hover) */
     .exp-item:hover {
         padding-left: 0;
         padding-right: 0;
         background: transparent;
         border-color: var(--border);
     }
+
+    /* Content cards: lower minmax so they don't overflow */
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 }
 
+/* ─────────────────────────────────────────────────────
+   ≤ 768px  —  iPad portrait / large phones
+   ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+
+    /* ── Global section ── */
+    .section {
+        padding: var(--s-lg) 1.5rem;
+    }
+
+    .section-label {
+        font-size: clamp(1.2rem, 4vw, 1.75rem);
+        margin-bottom: 2rem;
+    }
+
+    /* ── Nav ── */
+    nav {
+        grid-template-columns: 1fr auto;
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-center {
+        display: none;
+    }
+
+    .nav-brand {
+        font-size: 0.6rem;
+    }
+
+    .btn-cv {
+        font-size: 0.55rem;
+        padding: 0.38rem 0.8rem;
+    }
+
+    /* ── Hero ── */
+    #hero {
+        padding: 4rem 1.5rem 2rem;
+    }
+
     .hero-content {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .hero-photo {
-        width: clamp(180px, 40vw, 280px);
-        margin-top: 2rem;
+    .hero-name {
+        font-size: clamp(3.5rem, 16vw, 10rem);
     }
 
-    .section {
-        padding: var(--s-lg) 1.5rem;
+    .hero-photo {
+        width: clamp(160px, 40vw, 260px);
+        margin-top: 1.5rem;
+        border-radius: 20px;
     }
-    
+
+    .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .hero-role {
+        font-size: 0.9rem;
+    }
+
+    .hero-globe {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* ── About ── */
+    .about-p {
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
+    }
+
+    /* ── Showreel ── */
+    .showreel-container {
+        margin-top: 3rem;
+        border-radius: 16px;
+    }
+
+    /* ── Projects ── */
+    .proj-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .proj-card {
+        padding: 2rem 1.5rem;
+        border-radius: 18px;
+    }
+
+    .proj-num {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .proj-name {
+        font-size: 1.1rem;
+    }
+
+    .proj-desc {
+        font-size: 0.8rem;
+    }
+
+    /* ── Experience ── */
+    .exp-item {
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .exp-logo-float {
+        float: none;
+        display: block;
+        max-width: 80px;
+        margin: 0 0 1rem 0;
+    }
+
+    /* Reset inline styles on logos that have them */
+    .exp-logo-float[style] {
+        max-width: 80px !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .exp-role {
+        font-size: 1.2rem;
+    }
+
+    .exp-org {
+        font-size: 0.72rem;
+    }
+
+    .exp-desc {
+        font-size: 0.82rem;
+    }
+
+    /* ── Skills ── */
+    .skill-tags .tag {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* ── Content cards ── */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 2.5rem 2rem;
+        border-radius: 18px;
+    }
+
+    .content-title {
+        font-size: 3rem;
+    }
+
+    .content-desc {
+        font-size: 0.82rem;
+        margin-bottom: 2rem;
+    }
+
+    /* ── Contact ── */
+    .contact-email {
+        font-size: clamp(2.5rem, 10vw, 6rem);
+        margin-bottom: 3rem;
+    }
+
+    .contact-links {
+        gap: 1.5rem;
+    }
+
+    .contact-link {
+        font-size: 0.65rem;
+    }
+
+    /* ── Footer ── */
     #footer {
         padding: 2rem 1.5rem;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
+        text-align: center;
     }
-    
-    .content-grid {
-        grid-template-columns: 1fr;
+
+    /* ── Loader ── */
+    .loader-top-row,
+    #loader .loader-top-row {
+        left: 1.5rem !important;
+        right: 1.5rem !important;
+        top: 2rem !important;
+        font-size: 0.65rem !important;
     }
-    
+
+    .l-bar-wrap {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────
+   ≤ 480px  —  Mobile phones
+   ───────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+    /* ── Global ── */
+    .section {
+        padding: var(--s-lg) 1rem;
+    }
+
+    .section-label {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ── Nav ── */
     nav {
-        grid-template-columns: 1fr auto;
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1rem;
     }
-    
-    .nav-center {
-        display: none;
+
+    .nav-brand {
+        font-size: 0.52rem;
+        letter-spacing: 0.12em;
     }
-    
+
+    .btn-cv {
+        font-size: 0.5rem;
+        padding: 0.32rem 0.65rem;
+    }
+
+    /* ── Hero ── */
+    #hero {
+        min-height: 85vh;
+        padding: 3.5rem 1rem 1.5rem;
+    }
+
+    .hero-name {
+        font-size: clamp(2.8rem, 15vw, 6rem);
+    }
+
+    .hero-photo {
+        width: clamp(130px, 38vw, 200px);
+        margin-top: 1.2rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-bottom {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .hero-role {
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-globe {
+        width: 28px;
+        height: 28px;
+    }
+
+    .scroll-cue {
+        font-size: 0.5rem;
+    }
+
+    /* ── Marquee ── */
+    .mq-wrap {
+        padding: 0.6rem 0;
+    }
+
+    .mq-item {
+        font-size: 0.48rem;
+        padding: 0 1rem;
+    }
+
+    /* ── About ── */
+    .about-p {
+        font-size: clamp(0.9rem, 4vw, 1.15rem);
+        line-height: 1.65;
+    }
+
+    /* ── Showreel ── */
+    .showreel-container {
+        margin-top: 2rem;
+        border-radius: 12px;
+    }
+
+    /* ── Projects ── */
+    .proj-card {
+        padding: 1.5rem 1.25rem;
+        border-radius: 16px;
+    }
+
+    .proj-num {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .proj-name {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .proj-desc {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.55;
+    }
+
+    .proj-tags {
+        gap: 0.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tag {
+        font-size: 0.5rem;
+        padding: 0.18rem 0.45rem;
+    }
+
+    /* ── Experience ── */
+    .exp-item {
+        padding: 1.5rem 0;
+        gap: 0.75rem;
+    }
+
+    .exp-period {
+        font-size: 0.68rem;
+    }
+
+    .exp-logo-float,
+    .exp-logo-float[style] {
+        max-width: 60px !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .exp-role {
+        font-size: 1rem;
+    }
+
+    .exp-org {
+        font-size: 0.65rem;
+        margin-bottom: 1rem;
+    }
+
+    .exp-desc {
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+
+    /* ── Skills ── */
+    .skill-cat {
+        font-size: 0.75rem;
+    }
+
+    .skill-tags .tag {
+        font-size: 0.62rem;
+        padding: 0.35rem 0.65rem;
+    }
+
+    .skill-tags {
+        gap: 0.4rem;
+    }
+
+    .skills-body {
+        gap: 2rem;
+    }
+
+    /* ── Content cards ── */
+    .content-card {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .content-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-platform {
+        font-size: 0.55rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-desc {
+        font-size: 0.78rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-cta {
+        font-size: 0.58rem;
+    }
+
+    /* ── Contact ── */
+    #contact {
+        padding-top: var(--s-lg);
+        padding-bottom: var(--s-lg);
+    }
+
+    .contact-email {
+        font-size: clamp(2rem, 11vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+
     .contact-links {
-        gap: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-link {
+        font-size: 0.6rem;
+    }
+
+    /* ── Footer ── */
+    #footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.68rem;
+    }
+
+    /* ── Loader ── */
+    .loader-top-row,
+    #loader .loader-top-row {
+        left: 1rem !important;
+        right: 1rem !important;
+        top: 1.5rem !important;
+        font-size: 0.58rem !important;
+    }
+
+    .l-bar-wrap {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1.5rem;
+    }
+
+    .l-num {
+        font-size: clamp(5rem, 18vw, 10rem);
+    }
+}
+
+/* ─────────────────────────────────────────────────────
+   ≤ 360px  —  Very small phones (iPhone SE, Galaxy S)
+   ───────────────────────────────────────────────────── */
+@media (max-width: 360px) {
+
+    .hero-name {
+        font-size: clamp(2.4rem, 14vw, 4.5rem);
+    }
+
+    .hero-photo {
+        width: 120px;
+    }
+
+    .contact-email {
+        font-size: clamp(1.8rem, 12vw, 2.8rem);
+    }
+
+    .content-title {
+        font-size: 1.8rem;
+    }
+
+    .proj-card {
+        padding: 1.25rem 1rem;
     }
 }
