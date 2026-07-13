@@ -18,8 +18,8 @@ function initAbout() {
         scrollTrigger: {
             trigger: '#about',
             start: 'top 70%',
-            end: 'bottom 30%',
-            scrub: 1.8
+            end: 'bottom 60%',
+            scrub: 1.2
         }
     });
 }
