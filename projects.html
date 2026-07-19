@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Guha - My Projects</title>
+  <meta name="description"
+    content="Ex-DRDO Robotics Intern. Building agentic AI, local LLMs, and computer vision systems." />
+  <meta name="author" content="Aditya Guha" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aditya Guha - AI Engineer" />
+  <meta property="og:description"
+    content="Ex-DRDO Robotics Intern. Building agentic AI, local LLMs, and computer vision systems." />
+  <meta property="og:url" content="https://adityaguha.tech" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/img/favicon.jpg" />
+
+  <!-- Typography is now natively handled by system fonts for maximum performance and Apple aesthetic -->
+
+  <!-- CSS — order matters -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/cursor.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/marquee.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link rel="stylesheet" href="assets/css/experience.css" />
+  <link rel="stylesheet" href="assets/css/skills.css" />
+  <link rel="stylesheet" href="assets/css/content.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════
+       LOADER
+  ═══════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-top-row" style="position: absolute; top: 3rem; left: 3rem; right: 3rem; display: flex; justify-content: space-between; font-family: SF Mono, ui-monospace, Menlo, Monaco, monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--gray-hi); text-transform: uppercase;">
+      <div>INITIALIZING SYSTEM</div>
+      <div id="lTime">--:--:--</div>
+    </div>
+    <div class="l-num" id="lNum">00</div>
+    <div class="l-label">Loading</div>
+    <div class="l-bar-wrap">
+      <div class="l-bar" id="lBar"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════ -->
+  <div class="cur-dot" id="cDot"></div>
+  <div class="cur-ring" id="cRing"></div>
+
+  <!-- ═══════════════════════════════
+       NAV
+  ═══════════════════════════════ -->
+  <nav id="nav">
+    <a href="index.html" class="nav-brand">Aditya Guha Studio</a>
+
+    <div class="nav-center">
+      <span>India</span>
+      <span id="clock">—</span>
+    </div>
+
+    <div class="nav-right">
+      <a href="#" class="nav-link magnetic" style="opacity: 0.5; pointer-events: none;">My Projects</a>
+      <a href="https://drive.google.com/file/d/1p8rm4S0QjFrGAtVsVPG192keOFyugHwR/view?usp=sharing" target="_blank"
+        rel="noopener" class="btn-cv magnetic">Download CV</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════
+       PROJECTS
+  ═══════════════════════════════ -->
+  <section id="projects" class="section" style="padding-top: 10rem; min-height: 100vh;">
+    <div class="section-label">Selected Projects</div>
+    <div class="proj-grid">
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">01</span>
+        <h3 class="proj-name">NexusAgent</h3>
+        <p class="proj-desc">A local-first ReAct agentic AI assistant with SSE streaming, multi-turn tool calling using Qwen3-8B via llama.cpp, and a Perplexity-style Vanilla JS frontend. Serper.dev search integration with FastAPI backend.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">Qwen3-8B</span>
+          <span class="tag">ReAct</span><span class="tag">FastAPI</span>
+          <span class="tag">llama.cpp</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa/NexusAgent" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">02</span>
+        <h3 class="proj-name">PixelStudio Pro</h3>
+        <p class="proj-desc">Local AI image generation pipeline combining FastAPI, llama.cpp LLM inference, and ComfyUI headless with JuggernautXL. Runs fully offline on Apple Silicon with zero cloud dependency.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">ComfyUI</span>
+          <span class="tag">llama.cpp</span><span class="tag">FastAPI</span>
+          <span class="tag">SDXL</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa/Pixel-Studio-Pro" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">03</span>
+        <h3 class="proj-name">TripMind</h3>
+        <p class="proj-desc">AI powered travel planning agent that generates smart multi-day itineraries using real-time
+          weather and Google Maps data. Built with FastAPI and Google Gemini 2.5 Flash.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span>
+          <span class="tag">Gemini</span><span class="tag">Google Places</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa/TripMind" target="_blank" rel="noopener" class="proj-link">GitHub
+          ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">04</span>
+        <h3 class="proj-name">MeetingMind</h3>
+        <p class="proj-desc">Multi-stage AI pipeline for real-time meeting understanding using Faster-Whisper, pyannote
+          diarization, Ollama LLMs, and ChromaDB-based Retrieval-Augmented Generation.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">Whisper</span>
+          <span class="tag">Ollama</span><span class="tag">RAG</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa/MeetingMind" target="_blank" rel="noopener" class="proj-link">GitHub
+          ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">05</span>
+        <h3 class="proj-name">Ant-RL-Locomotion</h3>
+        <p class="proj-desc">RL-based quadruped locomotion built at DRDO. PPO agent trained in MuJoCo physics simulation
+          using JAX and Stable Baselines3. From random flailing to a stable, controlled gait.</p>
+        <div class="proj-tags">
+          <span class="tag">MuJoCo</span><span class="tag">PPO</span>
+          <span class="tag">JAX</span><span class="tag">SB3</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa/Ant-RL-Locomotion" target="_blank" rel="noopener"
+          class="proj-link">GitHub ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">06</span>
+        <h3 class="proj-name">Local LLM Server</h3>
+        <p class="proj-desc">Backend infrastructure built with FastAPI to serve locally hosted large language models via
+          structured APIs.</p>
+        <div class="proj-tags">
+          <span class="tag">FastAPI</span><span class="tag">LLM</span>
+          <span class="tag">Python</span><span class="tag">Backend</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">07</span>
+        <h3 class="proj-name">NeuroCourier</h3>
+        <p class="proj-desc">Multimodal AI agent supporting text and image input using locally deployed LLMs, designed
+          for privacy-focused interaction via Telegram and WhatsApp.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span><span class="tag">Local LLM</span>
+          <span class="tag">Telegram</span><span class="tag">Multimodal</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+      </div>
+
+      <div class="proj-card" data-card>
+        <span class="proj-num">08</span>
+        <h3 class="proj-name">Anti-Cheat Engine</h3>
+        <p class="proj-desc">Computer vision-based AI proctoring system using face detection, gaze tracking, and
+          behavioral monitoring to ensure examination integrity.</p>
+        <div class="proj-tags">
+          <span class="tag">MediaPipe</span><span class="tag">YOLOv8</span>
+          <span class="tag">Computer Vision</span><span class="tag">Python</span>
+        </div>
+        <a href="https://github.com/AdityaGuhaa" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════
+       FOOTER
+  ═══════════════════════════════ -->
+  <footer id="footer">
+    <span>© 2026 Aditya Guha</span>
+    <span>Pune, India</span>
+  </footer>
+
+  <!-- ═══════════════════════════════
+       SCRIPTS — CDN first, then ours
+  ═══════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <script src="assets/js/clock.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/magnetic.js"></script>
+  <script src="assets/js/lenis.js"></script>
+  <script src="assets/js/hero.js"></script>
+  <script src="assets/js/marquee.js"></script>
+  <script src="assets/js/about.js"></script>
+  <script src="assets/js/cards.js"></script>
+  <script src="assets/js/scrollfx.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

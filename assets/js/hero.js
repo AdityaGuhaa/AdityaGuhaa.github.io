@@ -1,4 +1,11 @@
 function initHero() {
+    const hl1 = document.getElementById('hl1');
+    if (!hl1) {
+        // Just fade nav in if hero is missing
+        gsap.to('#nav', { opacity: 1, duration: 0.7, delay: 0.1, ease: 'power2.out' });
+        return;
+    }
+
     // Split "ADITYA" and "GUHA" into individual character spans
     function splitToChars(text, containerEl) {
         containerEl.innerHTML = '';
