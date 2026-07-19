@@ -1,5 +1,11 @@
 function initLoader(onComplete) {
     const loader = document.getElementById('loader');
+    
+    // If no loader element is present on this page, run callback immediately
+    if (!loader) {
+        if (typeof onComplete === 'function') onComplete();
+        return;
+    }
 
     const numEl = document.getElementById('lNum');
     const barEl = document.getElementById('lBar');
