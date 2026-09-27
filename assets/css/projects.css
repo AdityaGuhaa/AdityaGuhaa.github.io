@@ -94,33 +94,33 @@
     display: flex;
     flex-direction: row;
     gap: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 24px;
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .feat-tile:hover {
-    border-color: rgba(255, 255, 255, 0.15);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border-color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
     transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 48px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 48px 0 rgba(0, 0, 0, 0.1);
 }
 
 .feat-tile-img {
     flex: 0 0 50%;
     max-width: 50%;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
     overflow: hidden; /* Contains image scale on hover */
 }
 
@@ -131,12 +131,12 @@
     display: block;
     aspect-ratio: 16/10;
     transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-    filter: brightness(0.9) contrast(1.05);
+    filter: brightness(0.95) contrast(1.05);
 }
 
 .feat-tile:hover .feat-tile-img img {
     transform: scale(1.05);
-    filter: brightness(1.05) contrast(1.1);
+    filter: brightness(1.0) contrast(1.1);
 }
 
 .feat-tile-content {
@@ -165,7 +165,7 @@
 }
 
 .feat-tile:hover .feat-tile-content p {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--white);
 }
 
 .feat-tile-tags {
@@ -176,8 +176,8 @@
 
 .feat-tile-tags .tag {
     padding: 0.4rem 0.8rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 40px;
@@ -189,8 +189,8 @@
 }
 
 .feat-tile:hover .feat-tile-tags .tag {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
     color: var(--white);
     transform: translateY(-2px);
 }
