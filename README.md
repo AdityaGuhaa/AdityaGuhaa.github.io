@@ -34,13 +34,13 @@ This applies to all files including but not limited to HTML, CSS, JavaScript, im
 
 **Unauthorized use of this code is a violation of copyright law and may result in legal action.**
 
-For licensing inquiries, contact: **[adi@adityaguha.tech](mailto:adi@adityaguha.tech)**
+For licensing inquiries, contact: **[adityaguha.tech@gmail.com](mailto:adityaguha.tech@gmail.com)**
 
 See the full [LICENSE](./LICENSE) file for complete terms.
 
 ## Contact
 
-**Email:** [adi@adityaguha.tech](mailto:adi@adityaguha.tech)
+**Email:** [adityaguha.tech@gmail.com](mailto:adityaguha.tech@gmail.com)
 
 **LinkedIn:** [Aditya Guha](https://www.linkedin.com/in/adityaguha1/)
 

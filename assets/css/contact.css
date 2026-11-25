@@ -13,8 +13,11 @@
 
 .contact-email {
     font-family: var(--font-d);
-    font-size: clamp(4rem, 12vw, 10rem);
+    font-size: clamp(4rem, 8vw, 9rem);
     line-height: 0.85;
+    max-width: 100%;
+    /* Only break at the <br> after "@"; split mid-word only as a last resort */
+    overflow-wrap: anywhere;
     color: var(--white);
     text-decoration: none;
     display: inline-block;

@@ -1,0 +1,29 @@
+/* ── Interactive robot dog (assets/js/robot.js) ── */
+.robot-canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 110;           /* above content and the nav (100); below cursor + loader */
+    pointer-events: none;
+    transform-origin: 0 0;
+    will-change: transform, opacity;
+    opacity: 0;
+}
+
+.robot-hit {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 111;
+    display: none;
+    border-radius: 45%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Desktop hides the native cursor in favour of the custom one */
+@media (hover: hover) and (pointer: fine) {
+    .robot-hit {
+        cursor: none;
+    }
+}

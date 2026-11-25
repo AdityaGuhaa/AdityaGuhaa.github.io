@@ -194,3 +194,53 @@
     color: var(--white);
     transform: translateY(-2px);
 }
+
+/* ── Pinned horizontal gallery (desktop only, toggled by gallery.js) ── */
+#projects.is-horizontal {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+}
+
+#projects.is-horizontal .proj-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    gap: 2rem;
+    will-change: transform;
+}
+
+#projects.is-horizontal .proj-card {
+    flex: 0 0 clamp(340px, 29vw, 440px);
+}
+
+.proj-progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 1px;
+    margin: -1.25rem 0 2.75rem;
+    background: var(--border);
+}
+
+.proj-progress-fill {
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+}
+
+.proj-progress-count {
+    position: relative;
+    top: -1rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: var(--gray-mid);
+    font-variant-numeric: tabular-nums;
+}

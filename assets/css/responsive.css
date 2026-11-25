@@ -68,8 +68,7 @@
 
     /* Contact email — prevent overflow on iPad */
     .contact-email {
-        font-size: clamp(3rem, 9vw, 7rem);
-        word-break: break-all;
+        font-size: clamp(3rem, 8vw, 7rem);
     }
 }
 
@@ -263,7 +262,7 @@
 
     /* ── Contact ── */
     .contact-email {
-        font-size: clamp(2.5rem, 10vw, 6rem);
+        font-size: clamp(2rem, 8.5vw, 5rem);
         margin-bottom: 3rem;
     }
 
@@ -500,7 +499,7 @@
     }
 
     .contact-email {
-        font-size: clamp(2rem, 11vw, 3.5rem);
+        font-size: clamp(1.5rem, 8.5vw, 3rem);
         margin-bottom: 2rem;
     }
 
@@ -554,7 +553,7 @@
     }
 
     .contact-email {
-        font-size: clamp(1.8rem, 12vw, 2.8rem);
+        font-size: clamp(1.4rem, 8.5vw, 2.4rem);
     }
 
     .content-title {
@@ -563,5 +562,45 @@
 
     .proj-card {
         padding: 1.25rem 1rem;
+    }
+}
+
+/* ─────────────────────────────────────────────────────
+   Touch devices  —  finger-sized tap targets (~44px)
+   ───────────────────────────────────────────────────── */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Nav: grow the hit area invisibly so the bar's height doesn't change */
+    .nav-brand,
+    .nav-link,
+    .btn-cv {
+        position: relative;
+    }
+
+    .nav-brand::after,
+    .nav-link::after,
+    .btn-cv::after {
+        content: '';
+        position: absolute;
+        inset: -16px -8px;
+    }
+
+    /* Project card links: real padding, which also separates stacked links */
+    .proj-link {
+        padding: 0.875rem 0;
+    }
+
+    .proj-link + .proj-link {
+        margin-top: -0.25rem;
+    }
+
+    /* Contact links */
+    .contact-link {
+        display: inline-block;
+        padding: 0.875rem 1rem;
+    }
+
+    .contact-links {
+        gap: 0 0.5rem;
     }
 }

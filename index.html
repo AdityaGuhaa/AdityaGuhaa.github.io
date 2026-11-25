@@ -36,7 +36,18 @@
   <link rel="stylesheet" href="assets/css/content.css" />
   <link rel="stylesheet" href="assets/css/contact.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/robot.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- three.js for the interactive robot (ES modules, no build step) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -323,7 +334,7 @@
       <div class="exp-item">
         <div class="exp-period">2023</div>
         <div class="exp-body">
-          <img src="bvdu_logo.png" alt="BVDU Logo" class="exp-logo-float" style="max-width: 220px; margin-top: -3.5rem; margin-left: -4rem; margin-right: 0.5rem;">
+          <img src="bvdu_logo.png" alt="BVDU Logo" class="exp-logo-float" style="max-width: 88px; margin-left: 0.4rem; margin-bottom: 5rem;">
           <h3 class="exp-role">Public Relations Executive</h3>
           <div class="exp-org">Bharati Vidyapeeth Deemed University &nbsp;·&nbsp; Navi Mumbai, India</div>
           <p class="exp-desc">Managed public relations, student outreach, and external communications for university events and campus initiatives.</p>
@@ -441,8 +452,8 @@
   ═══════════════════════════════ -->
   <section id="contact" class="section">
     <div class="section-label">Contact Mail</div>
-    <a href="mailto:adi@adityaguha.tech" class="contact-email">
-      ADI@<br>ADITYAGUHA.TECH
+    <a href="mailto:adityaguha.tech@gmail.com" class="contact-email">
+      ADITYAGUHA.TECH@<br>GMAIL.COM
     </a>
     <div class="contact-links">
       <a href="https://github.com/AdityaGuhaa" target="_blank" rel="noopener" class="contact-link">GitHub ↗</a>
@@ -460,7 +471,7 @@
   ═══════════════════════════════ -->
   <footer id="footer">
     <span>© 2026 Aditya Guha</span>
-    <span>Pune, India</span>
+    <span>Mumbai &amp; Pune, India</span>
   </footer>
 
   <!-- ═══════════════════════════════
@@ -479,8 +490,10 @@
   <script src="assets/js/marquee.js"></script>
   <script src="assets/js/about.js"></script>
   <script src="assets/js/cards.js"></script>
+  <script src="assets/js/gallery.js"></script>
   <script src="assets/js/scrollfx.js"></script>
   <script src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/robot.js"></script>
 
 </body>
 
